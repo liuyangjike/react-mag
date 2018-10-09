@@ -1,0 +1,87 @@
+@import "../../assets/fonts/iconfont.css";
+.header-container {
+  height: 70px;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 11;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-icon {
+  color: #fff;
+  font-size: 36px !important;
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translate3d(-50%, -50%, 0)
+}
+
+.header-title {
+  font-size: 32px;
+  color: #fff;
+  text-align: left;
+}
+
+.header-link{
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translate3d(0, -50%, 0);
+  color: #fff;
+  font-size: 36px !important;
+}
+
+.nav-slide-list{
+  position: fixed;
+  z-index: 101;
+  top: 70px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-link{
+  font-size: 32px !important;
+  border-bottom: 1px solid #ddd;
+  margin: 0 30px;
+  padding: 30px 20px;
+  color: #333 !important;
+  position: relative;
+}
+
+.nav-link:before{
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+  color: #666;
+}
+
+
+.nav-enter {
+  transform: translate3d(-100%, 0, 0);
+}
+
+.nav-enter.nav-enter-active {
+  transform: translate3d(0, 0, 0);
+  transition: transform 300ms;
+}
+
+.nav-leave {
+  transform: translate3d(0, 0, 0);
+}
+
+.nav-leave.nav-leave-active {
+  transform: translate3d(-100%, 0, 0);
+  transition: transform 300ms;
+}
