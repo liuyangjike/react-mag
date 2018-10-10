@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {is, fromJS} from 'immutable'
 import API from '@/api/api'
-import './recordList.css'
+import './recordList.scss'
 
 
 class RecordList extends Component{
@@ -47,8 +47,8 @@ class RecordList extends Component{
             this.state.recordData.map((item, index) => {
               return <li className='record-item' key={index}>
                 <section className='record-item-header'>
-                  <span style={{fontSize: '26px',color: '#999'}}>创建时间: {item.created_at}</span>
-                  <span style={{ fontSize: '26px', color: '#F20500'}}>{item.type_name}</span>
+                  <span >创建时间: {item.created_at}</span>
+                  <span >{item.type_name}</span>
                 </section>
                 <section className='record-item-content'>
                   <p><span>用户名: </span>{item.customers_name} &emsp; {item.customers_phone}</p>

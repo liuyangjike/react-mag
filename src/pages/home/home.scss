@@ -1,0 +1,61 @@
+@import '../../style//mixin.scss';
+
+.home-container{
+  padding-top: 70px;
+  .common-title {
+    @include font(32px, $base-color);
+    padding: 30px;
+  }
+  .home-form {
+    background-color: #fff;
+    .home-form-item {
+      height: 120px;
+      border-bottom: 1px solid #eee;
+      line-height: 120px;
+      span {
+        @include font(28px, #555);
+        margin-left: 30px;
+        margin-right: 20px;
+      }
+      input {
+        border: none;
+        font-size: 30px;
+      }
+      ::-webkit-input-placeholder {
+        color: #ccc;
+      }
+    }
+  }
+  .common-select-btn {
+    background-color: #fff;
+    min-height: 120px;
+    @include font(35px, #ccc, center);
+    @include flex;
+  }
+  .upload-img-con {
+    text-align: center;
+    .file-lable{
+      position: relative;
+      input[type='file'] {
+        position: absolute;
+        @include wh(100%, 100%);
+        background-color: red;
+        top: 0;
+        right: 0;
+        opacity: 0;
+      }
+    }
+    .select-img {
+      text-align: center;
+    }
+  }
+
+  .submit-btn {
+    width: 90%;
+    background-color: $base-color;
+    margin: 50px auto 0;
+    border-radius: 10px;
+    line-height: 70px;
+    @include font(32px, #fff, center)
+  }
+}

@@ -10,7 +10,7 @@ import { testAction } from '@/store/test/action'
 import Button from '@/components/button/button'
 import Alert from '@/components/alert/alert'
 import Header from '@/components/header/header'
-import './home.css'
+import './home.scss'
 
 
 class Home extends Component {  // 不会自动绑定this,需要手动绑定,否则this不能获取当前组件实例对象。

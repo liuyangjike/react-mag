@@ -1,13 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Route from './router/'
-import './index.css';
 import FastClick from 'fastclick'
 import {Provider} from 'react-redux'
 import {AppContainer} from 'react-hot-loader'
 import store from '@/store/store'
 import registerServiceWorker from './registerServiceWorker';
-import './style/base.css'
+import './style/base.scss'
 
 FastClick.attach(document.body)  // 移动端的点击事件
 

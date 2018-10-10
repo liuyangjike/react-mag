@@ -1,10 +1,12 @@
 import React, {Component} from 'react'
 import {is, fromJS} from 'immutable'
+// import { DatePicker } from 'antd'
 import {NavLink, Switch, Route, Redirect} from 'react-router-dom'
 import Header from '@/components/header/header'
 import RecordList from './components/recordList'
-import './record.css'
+import './record.scss'
 
+// const { MonthPicker } = DatePicker
 
 class Record extends Component {
   state = {
@@ -28,6 +30,12 @@ class Record extends Component {
     }
     this.setState({flagBarPos})
   }
+
+  // onChange = (date, dateString) => {
+  //   console.log(date, dateString)
+  // }
+
+
 
     componentWillReceiveProps (nextProps) {
       // 属性变化时设置头部底部标签位置
@@ -55,6 +63,10 @@ class Record extends Component {
               <div className='nav-flag-bar' style={{left: this.state.flagBarPos}}></div>
             </nav>
           </section>
+          <div>
+          {/* <MonthPicker onChange={this.onChange} placeholder="Select month" /> */}
+          <br />
+          </div>
           {/* 子路由在父级配置, react-router新特性, 更加灵活*/}
           <Switch>
             <Route path={`${this.props.match.path}/:type`} component={RecordList}/>

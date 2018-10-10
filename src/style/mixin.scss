@@ -1,0 +1,19 @@
+$base-color: #975ec9;
+$base-red: #F20500;
+
+@mixin flex($justify-content: center, $align-items: center) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin font($font-size, $color: #333, $text-align: left) {
+  font-size: $font-size;
+  color: $color;
+  text-align: $text-align;
+}
+
+@mixin wh($w, $h){
+  width: $w;
+  height: $h;
+}
